@@ -1,0 +1,84 @@
+// Sticky header scroll shadow
+const header = document.getElementById('header');
+const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+// Burger menu
+const burger = document.querySelector('.burger');
+const mobileNav = document.getElementById('mobile-nav');
+if (burger && mobileNav) {
+    burger.addEventListener('click', () => {
+        const open = burger.classList.toggle('open');
+        mobileNav.classList.toggle('open', open);
+        burger.setAttribute('aria-expanded', String(open));
+    });
+    mobileNav.querySelectorAll('a').forEach(a => {
+        a.addEventListener('click', () => {
+            burger.classList.remove('open');
+            mobileNav.classList.remove('open');
+            burger.setAttribute('aria-expanded', 'false');
+        });
+    });
+}
+
+// Reveal on scroll
+const revealItems = document.querySelectorAll('.reveal');
+if ('IntersectionObserver' in window && revealItems.length) {
+    const io = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                e.target.classList.add('in');
+                io.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.15 });
+    revealItems.forEach(el => io.observe(el));
+}
+
+// Counter animation
+const counters = document.querySelectorAll('[data-count]');
+if ('IntersectionObserver' in window && counters.length) {
+    const easeOut = t => 1 - Math.pow(1 - t, 3);
+    const animate = (el) => {
+        const target = parseInt(el.dataset.count, 10);
+        const duration = 1600;
+        const start = performance.now();
+        const step = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const val = Math.floor(easeOut(p) * target);
+            el.textContent = val.toLocaleString('fr-FR');
+            if (p < 1) requestAnimationFrame(step);
+            else el.textContent = target.toLocaleString('fr-FR');
+        };
+        requestAnimationFrame(step);
+    };
+    const cio = new IntersectionObserver((entries) => {
+        entries.forEach(e => {
+            if (e.isIntersecting) {
+                animate(e.target);
+                cio.unobserve(e.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    counters.forEach(el => cio.observe(el));
+}
+
+// Year in footer
+const y = document.getElementById('year');
+if (y) y.textContent = new Date().getFullYear();
+
+// Smooth anchor scrolling with header offset
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', (e) => {
+        const id = a.getAttribute('href');
+        if (id.length > 1) {
+            const target = document.querySelector(id);
+            if (target) {
+                e.preventDefault();
+                const top = target.getBoundingClientRect().top + window.scrollY - 80;
+                window.scrollTo({ top, behavior: 'smooth' });
+            }
+        }
+    });
+});
