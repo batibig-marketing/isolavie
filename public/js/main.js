@@ -1,3 +1,14 @@
+// Hero slideshow crossfade
+const heroSlides = document.querySelectorAll('.hero-slide');
+if (heroSlides.length > 1) {
+    let heroIdx = 0;
+    setInterval(() => {
+        heroSlides[heroIdx].classList.remove('active');
+        heroIdx = (heroIdx + 1) % heroSlides.length;
+        heroSlides[heroIdx].classList.add('active');
+    }, 5000);
+}
+
 // Sticky header scroll shadow
 const header = document.getElementById('header');
 const onScroll = () => header.classList.toggle('scrolled', window.scrollY > 20);
