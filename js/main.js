@@ -45,10 +45,17 @@ if (burger && mobileNav) {
     });
 }
 
-// Reveal on scroll (add auto-reveal to team-cards with stagger)
+// Reveal on scroll (add auto-reveal to team-cards with stagger + wrap img in photo container)
 document.querySelectorAll('.team-grid .team-card').forEach((card, i) => {
     card.classList.add('reveal', 'reveal-team');
     card.style.setProperty('--reveal-delay', `${(i % 12) * 60}ms`);
+    const img = card.querySelector('img');
+    if (img && !card.querySelector('.team-card-photo')) {
+        const wrap = document.createElement('div');
+        wrap.className = 'team-card-photo';
+        img.parentNode.insertBefore(wrap, img);
+        wrap.appendChild(img);
+    }
 });
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealItems.length) {
