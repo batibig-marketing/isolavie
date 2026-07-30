@@ -1,3 +1,15 @@
+// Anti-download protection on images
+document.addEventListener('contextmenu', (e) => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+});
+document.addEventListener('dragstart', (e) => {
+    if (e.target.tagName === 'IMG') e.preventDefault();
+});
+document.querySelectorAll('img').forEach(img => {
+    img.setAttribute('draggable', 'false');
+    img.setAttribute('oncontextmenu', 'return false;');
+});
+
 // Hero slideshow crossfade
 const heroSlides = document.querySelectorAll('.hero-slide');
 if (heroSlides.length > 1) {

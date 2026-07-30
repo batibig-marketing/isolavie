@@ -62,6 +62,9 @@
 .page-hero-yellow::before{background:radial-gradient(50% 60% at 100% 100%,rgba(179,32,32,0.25),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(42,178,231,0.15),transparent 70%);}
 .page-hero-yellow h1,.page-hero-yellow p,.page-hero-yellow .breadcrumb,.page-hero-yellow .breadcrumb a{color:#3A2900;}
 .page-hero-yellow .breadcrumb a:hover{color:var(--forest);}
+/* Protection anti-téléchargement des images */
+img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;-webkit-touch-callout:none;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;pointer-events:auto;}
+.no-download-overlay{position:absolute;inset:0;z-index:2;background:transparent;}
 /* Gallery - fonds colorés cyclés par image (palette logo) */
 .gallery-item{padding:14px 14px 20px;border-radius:var(--radius-lg);transition:background .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);}
 .gallery-item:hover{box-shadow:var(--shadow-md);}
