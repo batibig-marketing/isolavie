@@ -45,7 +45,11 @@ if (burger && mobileNav) {
     });
 }
 
-// Reveal on scroll
+// Reveal on scroll (add auto-reveal to team-cards with stagger)
+document.querySelectorAll('.team-grid .team-card').forEach((card, i) => {
+    card.classList.add('reveal', 'reveal-team');
+    card.style.setProperty('--reveal-delay', `${(i % 12) * 60}ms`);
+});
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealItems.length) {
     const io = new IntersectionObserver((entries) => {
@@ -55,7 +59,7 @@ if ('IntersectionObserver' in window && revealItems.length) {
                 io.unobserve(e.target);
             }
         });
-    }, { threshold: 0.15 });
+    }, { threshold: 0.05, rootMargin: '0px 0px -60px 0px' });
     revealItems.forEach(el => io.observe(el));
 }
 
