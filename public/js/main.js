@@ -45,7 +45,15 @@ if (burger && mobileNav) {
     });
 }
 
-// Reveal on scroll (add auto-reveal to team-cards with stagger + wrap img in photo container)
+// Reveal on scroll (add auto-reveal to team-cards with stagger + wrap img in photo container + color cycling)
+const teamColors = [
+    'rgba(42,178,231,0.28)',   // blue
+    'rgba(245,216,42,0.28)',   // yellow
+    'rgba(231,30,118,0.22)',   // pink
+    'rgba(140,196,50,0.28)',   // green
+    'rgba(245,166,35,0.28)',   // orange
+    'rgba(179,32,32,0.20)'     // bordeaux
+];
 document.querySelectorAll('.team-grid .team-card').forEach((card, i) => {
     card.classList.add('reveal', 'reveal-team');
     card.style.setProperty('--reveal-delay', `${(i % 12) * 60}ms`);
@@ -56,6 +64,8 @@ document.querySelectorAll('.team-grid .team-card').forEach((card, i) => {
         img.parentNode.insertBefore(wrap, img);
         wrap.appendChild(img);
     }
+    const photoWrap = card.querySelector('.team-card-photo');
+    if (photoWrap) photoWrap.style.background = teamColors[i % teamColors.length];
 });
 const revealItems = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window && revealItems.length) {
