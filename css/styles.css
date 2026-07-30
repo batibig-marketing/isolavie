@@ -62,6 +62,19 @@
 .page-hero-yellow::before{background:radial-gradient(50% 60% at 100% 100%,rgba(179,32,32,0.25),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(42,178,231,0.15),transparent 70%);}
 .page-hero-yellow h1,.page-hero-yellow p,.page-hero-yellow .breadcrumb,.page-hero-yellow .breadcrumb a{color:#3A2900;}
 .page-hero-yellow .breadcrumb a:hover{color:var(--forest);}
+/* Certifications : fond beige + cartes texte */
+.section-beige{background:#EFE7D6;}
+.certifs-grid-2{display:grid;grid-template-columns:1fr 1fr;gap:48px 80px;margin-top:20px;}
+.certif-card{text-align:center;padding:20px 10px;}
+.certif-card-logo{height:120px;display:flex;align-items:center;justify-content:center;margin-bottom:20px;}
+.certif-card-logo img{max-height:100px;max-width:160px;width:auto;height:auto;object-fit:contain;}
+.certif-card-logo-row{gap:32px;}
+.certif-card-logo-row img{max-height:80px;max-width:130px;}
+.certif-card-logo-aides{gap:20px;}
+.certif-card-logo-aides img{max-height:70px;max-width:110px;}
+.certif-card h3{font-size:22px;font-family:'Inter',sans-serif;font-weight:700;color:var(--ink);margin-bottom:16px;}
+.certif-card p{font-size:15px;line-height:1.7;color:var(--ink-2);max-width:520px;margin:0 auto;}
+@media (max-width:900px){.certifs-grid-2{grid-template-columns:1fr;gap:40px 0;}}
 /* Protection anti-téléchargement des images */
 img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-drag:none;user-drag:none;-webkit-touch-callout:none;user-select:none;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;pointer-events:auto;}
 .no-download-overlay{position:absolute;inset:0;z-index:2;background:transparent;}
