@@ -47,12 +47,12 @@ if (burger && mobileNav) {
 
 // Reveal on scroll (add auto-reveal to team-cards with stagger + wrap img in photo container + color cycling)
 const teamColors = [
-    'rgba(42,178,231,0.55)',   // blue
-    'rgba(245,216,42,0.60)',   // yellow
-    'rgba(231,30,118,0.45)',   // pink
-    'rgba(140,196,50,0.55)',   // green
-    'rgba(245,166,35,0.55)',   // orange
-    'rgba(179,32,32,0.40)'     // bordeaux
+    'rgba(42,178,231,0.25)',   // blue
+    'rgba(245,216,42,0.25)',   // yellow
+    'rgba(231,30,118,0.25)',   // pink
+    'rgba(140,196,50,0.25)',   // green
+    'rgba(245,166,35,0.25)',   // orange
+    'rgba(179,32,32,0.25)'     // bordeaux
 ];
 document.querySelectorAll('.team-grid .team-card').forEach((card, i) => {
     card.classList.add('reveal', 'reveal-team');
