@@ -60,7 +60,7 @@
 .page-hero-orange::before{background:radial-gradient(50% 60% at 100% 100%,rgba(179,32,32,0.30),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(140,196,50,0.15),transparent 70%);}
 .page-hero-yellow{background:linear-gradient(135deg,#C2AA1E 0%,#E8CE28 100%);color:#3A2900;}
 .page-hero-yellow::before{background:radial-gradient(50% 60% at 100% 100%,rgba(179,32,32,0.25),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(42,178,231,0.15),transparent 70%);}
-.page-hero-yellow h1,.page-hero-yellow p,.page-hero-yellow .breadcrumb,.page-hero-yellow .breadcrumb a{color:#3A2900;}
+.page-hero-yellow h1,.page-hero-yellow p,.page-hero-yellow .breadcrumb,.page-hero-yellow .breadcrumb a{color:#2A1B00;}.page-hero-yellow .breadcrumb{color:#4A3400;}
 .page-hero-yellow .breadcrumb a:hover{color:var(--forest);}
 /* Certifications : fond beige + cartes texte */
 .section-beige{background:#EFE7D6;}

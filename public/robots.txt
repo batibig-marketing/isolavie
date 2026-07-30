@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://isolavie.vercel.app/sitemap.xml
