@@ -1,25 +1,23 @@
-// Anti-download protection on images
+// Anti-download protection on images (delegated, no per-img mutation for perf)
 document.addEventListener('contextmenu', (e) => {
     if (e.target.tagName === 'IMG') e.preventDefault();
-});
+}, { passive: false });
 document.addEventListener('dragstart', (e) => {
     if (e.target.tagName === 'IMG') e.preventDefault();
-});
-document.querySelectorAll('img').forEach(img => {
-    img.setAttribute('draggable', 'false');
-    img.setAttribute('oncontextmenu', 'return false;');
-});
+}, { passive: false });
 
-// Hero slideshow crossfade
-const heroSlides = document.querySelectorAll('.hero-slide');
-if (heroSlides.length > 1) {
-    let heroIdx = 0;
-    setInterval(() => {
-        heroSlides[heroIdx].classList.remove('active');
-        heroIdx = (heroIdx + 1) % heroSlides.length;
-        heroSlides[heroIdx].classList.add('active');
-    }, 5000);
-}
+// Hero slideshow crossfade (delayed to not block LCP)
+window.addEventListener('load', () => {
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    if (heroSlides.length > 1) {
+        let heroIdx = 0;
+        setInterval(() => {
+            heroSlides[heroIdx].classList.remove('active');
+            heroIdx = (heroIdx + 1) % heroSlides.length;
+            heroSlides[heroIdx].classList.add('active');
+        }, 5000);
+    }
+});
 
 // Sticky header scroll shadow
 const header = document.getElementById('header');
