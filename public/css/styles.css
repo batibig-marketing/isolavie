@@ -49,6 +49,19 @@
 .services-grid a:nth-child(2) .service-icon{color:var(--terra);}
 .services-grid a:nth-child(3) .service-icon{color:var(--pink);}
 @media (max-width:900px){.section-title::after,.page-hero h1::after{width:90px;height:5px;}}
+/* Page-hero : bandeau coloré par page (palette logo) */
+.page-hero-blue{background:linear-gradient(135deg,#1E8FBF 0%,#2AB2E7 100%);}
+.page-hero-blue::before{background:radial-gradient(50% 60% at 100% 100%,rgba(245,166,35,0.25),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(140,196,50,0.20),transparent 70%);}
+.page-hero-pink{background:linear-gradient(135deg,#B21561 0%,#E71E76 100%);}
+.page-hero-pink::before{background:radial-gradient(50% 60% at 100% 100%,rgba(245,166,35,0.30),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(245,216,42,0.15),transparent 70%);}
+.page-hero-green{background:linear-gradient(135deg,#5F8B22 0%,#8CC432 100%);}
+.page-hero-green::before{background:radial-gradient(50% 60% at 100% 100%,rgba(42,178,231,0.20),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(245,166,35,0.20),transparent 70%);}
+.page-hero-orange{background:linear-gradient(135deg,#D48C1A 0%,#F5A623 100%);}
+.page-hero-orange::before{background:radial-gradient(50% 60% at 100% 100%,rgba(179,32,32,0.30),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(140,196,50,0.15),transparent 70%);}
+.page-hero-yellow{background:linear-gradient(135deg,#C2AA1E 0%,#E8CE28 100%);color:#3A2900;}
+.page-hero-yellow::before{background:radial-gradient(50% 60% at 100% 100%,rgba(179,32,32,0.25),transparent 70%),radial-gradient(40% 50% at 0% 0%,rgba(42,178,231,0.15),transparent 70%);}
+.page-hero-yellow h1,.page-hero-yellow p,.page-hero-yellow .breadcrumb,.page-hero-yellow .breadcrumb a{color:#3A2900;}
+.page-hero-yellow .breadcrumb a:hover{color:var(--forest);}
 /* Gallery - fonds colorés cyclés par image (palette logo) */
 .gallery-item{padding:14px 14px 20px;border-radius:var(--radius-lg);transition:background .3s var(--ease),transform .3s var(--ease),box-shadow .3s var(--ease);}
 .gallery-item:hover{box-shadow:var(--shadow-md);}
