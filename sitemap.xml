@@ -36,4 +36,61 @@
   <url><loc>https://isolavie.vercel.app/zones/la-montagne.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://isolavie.vercel.app/zones/paimboeuf.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
   <url><loc>https://isolavie.vercel.app/zones/herbignac.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/nantes.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/nantes.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/saint-nazaire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/saint-nazaire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/reze.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/reze.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/saint-herblain.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/saint-herblain.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/saint-sebastien-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/saint-sebastien-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/orvault.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/orvault.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/vertou.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/vertou.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/bouguenais.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/bouguenais.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/sainte-luce-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/sainte-luce-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/la-chapelle-sur-erdre.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/la-chapelle-sur-erdre.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/coueron.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/coueron.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/basse-goulaine.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/basse-goulaine.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/carquefou.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/carquefou.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/thouare-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/thouare-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/nort-sur-erdre.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/nort-sur-erdre.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/ancenis.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/ancenis.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/chateaubriant.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/chateaubriant.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/guerande.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/guerande.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/la-baule-escoublac.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/la-baule-escoublac.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/pornic.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/pornic.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/clisson.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/clisson.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/sautron.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/sautron.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/vigneux-de-bretagne.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/vigneux-de-bretagne.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/les-sorinieres.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/les-sorinieres.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/notre-dame-des-landes.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/notre-dame-des-landes.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/la-montagne.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/la-montagne.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/paimboeuf.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/paimboeuf.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/isolation-exterieure/herbignac.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
+  <url><loc>https://isolavie.vercel.app/ravalement/herbignac.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
 </urlset>
