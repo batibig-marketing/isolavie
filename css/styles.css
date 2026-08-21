@@ -98,3 +98,29 @@ img{-webkit-user-drag:none;-khtml-user-drag:none;-moz-user-drag:none;-o-user-dra
 .gallery-grid .gallery-item:nth-child(8n+7){background:rgba(42,178,231,0.35);}
 .gallery-grid .gallery-item:nth-child(8n){background:rgba(140,196,50,0.35);}
 .gallery-item .img-wrap{margin-bottom:14px;background:#fff;}
+/* Carte des zones d'intervention */
+.carte-wrap{max-width:900px;margin:40px auto 0;position:relative;}
+.carte-svg{width:100%;height:auto;display:block;border-radius:var(--radius-lg);box-shadow:var(--shadow-md);background:#EAF3F8;}
+.dept{fill:#fff;stroke:#5C0F0F;stroke-width:2;transition:fill .25s ease,transform .25s ease;cursor:pointer;transform-origin:center;transform-box:fill-box;}
+.dept-blue{fill:rgba(42,178,231,.55);}
+.dept-yellow{fill:rgba(245,216,42,.65);}
+.dept-green{fill:rgba(140,196,50,.55);}
+.dept:hover{fill:var(--forest);}
+.dept.active{fill:var(--forest);}
+.dept-num{font-family:Georgia,serif;font-size:38px;font-weight:700;fill:#5C0F0F;pointer-events:none;user-select:none;}
+.dept:hover~.dept-num,.dept.active~.dept-num{fill:#fff;}
+.city circle{fill:#B32020;stroke:#fff;stroke-width:2;}
+.city text{font-family:system-ui,sans-serif;font-size:13px;font-weight:600;fill:#2A1414;paint-order:stroke;stroke:#fff;stroke-width:3;}
+.city-siege circle{fill:var(--terra);r:9;}
+.city-siege text{font-weight:700;font-size:14px;}
+.carte-legend{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;margin-top:24px;}
+.carte-legend-item{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--ink);}
+.carte-legend-item .dot{width:16px;height:16px;border-radius:4px;display:inline-block;}
+.carte-legend-item .dot-blue{background:rgba(42,178,231,.55);border:1.5px solid #5C0F0F;}
+.carte-legend-item .dot-yellow{background:rgba(245,216,42,.65);border:1.5px solid #5C0F0F;}
+.carte-legend-item .dot-green{background:rgba(140,196,50,.55);border:1.5px solid #5C0F0F;}
+.carte-info{margin-top:20px;padding:20px 24px;background:#fff;border-radius:var(--radius);text-align:center;box-shadow:var(--shadow-sm);border-left:3px solid var(--terra);}
+.carte-info p{color:var(--ink-2);margin:0;}
+.carte-info strong{color:var(--forest);}
+.carte-info h4{color:var(--forest-3);margin-bottom:8px;font-size:19px;}
+@media (max-width:600px){.carte-legend{gap:14px;font-size:13px;}.dept-num{font-size:28px;}}

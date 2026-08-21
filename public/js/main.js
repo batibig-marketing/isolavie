@@ -6,6 +6,25 @@ document.addEventListener('dragstart', (e) => {
     if (e.target.tagName === 'IMG') e.preventDefault();
 }, { passive: false });
 
+// Carte zones interactives
+const deptInfo = {
+    '44': {name:'Loire-Atlantique', text:"Nantes, Saint-Nazaire, Sainte-Luce-sur-Loire (siège), La Chapelle-sur-Erdre, Orvault, Rezé, Saint-Herblain — département historique de nos interventions."},
+    '49': {name:'Maine-et-Loire', text:"Angers, Cholet, Saumur — interventions particuliers et chantiers professionnels (copropriétés, tertiaire)."},
+    '85': {name:'Vendée', text:"La Roche-sur-Yon, Les Sables-d'Olonne, Fontenay-le-Comte — isolation ITE et ravalement sur le littoral vendéen et l'intérieur."}
+};
+document.querySelectorAll('.dept').forEach(p => {
+    p.addEventListener('click', e => {
+        document.querySelectorAll('.dept.active').forEach(x => x.classList.remove('active'));
+        p.classList.add('active');
+        const code = p.getAttribute('data-code');
+        const info = deptInfo[code];
+        const box = document.querySelector('.carte-info');
+        if (info && box) {
+            box.innerHTML = `<h4>${code} · ${info.name}</h4><p>${info.text}</p>`;
+        }
+    });
+});
+
 // Hero slideshow crossfade (delayed to not block LCP)
 window.addEventListener('load', () => {
     const heroSlides = document.querySelectorAll('.hero-slide');
