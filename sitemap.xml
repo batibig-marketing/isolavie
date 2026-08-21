@@ -7,4 +7,33 @@
   <url><loc>https://isolavie.vercel.app/zones-intervention.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
   <url><loc>https://isolavie.vercel.app/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://isolavie.vercel.app/mentions-legales.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <url><loc>https://isolavie.vercel.app/zones/nantes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/saint-nazaire.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/reze.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/saint-herblain.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/saint-sebastien-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/orvault.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/vertou.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/bouguenais.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/sainte-luce-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/la-chapelle-sur-erdre.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/coueron.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/basse-goulaine.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/carquefou.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/thouare-sur-loire.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/nort-sur-erdre.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/ancenis.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/chateaubriant.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/guerande.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/la-baule-escoublac.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/pornic.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/clisson.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/sautron.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/vigneux-de-bretagne.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/les-sorinieres.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/notre-dame-des-landes.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/la-montagne.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/paimboeuf.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://isolavie.vercel.app/zones/herbignac.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
 </urlset>
