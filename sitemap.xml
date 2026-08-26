@@ -95,4 +95,5 @@
   <url><loc>https://isolavie.vercel.app/ravalement/herbignac.html</loc><changefreq>monthly</changefreq><priority>0.55</priority></url>
   <url><loc>https://isolavie.vercel.app/cgv.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://isolavie.vercel.app/cookies.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://isolavie.vercel.app/notre-histoire.html</loc><changefreq>monthly</changefreq><priority>0.85</priority></url>
 </urlset>
