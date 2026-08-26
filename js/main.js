@@ -133,3 +133,30 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
         }
     });
 });
+
+// Recrutement — modal contact par email (fallback quand mailto ne fait rien)
+(function(){
+  var EMAIL='contact@isolavie.fr', SUBJ="Candidature - Rejoindre l'équipe IsolaVie";
+  var BODY="Bonjour,\n\nJe souhaite candidater chez IsolaVie.\n\nMon nom :\nMon téléphone :\nLe poste qui m'intéresse :\n\nPièces jointes : CV et lettre de motivation.";
+  function esc(s){ return encodeURIComponent(s); }
+  function openModal(e){
+    if(e) e.preventDefault();
+    if(document.getElementById('rec-modal')) return;
+    var mail='mailto:'+EMAIL+'?subject='+esc(SUBJ)+'&body='+esc(BODY);
+    var gmail='https://mail.google.com/mail/?view=cm&fs=1&to='+EMAIL+'&su='+esc(SUBJ)+'&body='+esc(BODY);
+    var out='https://outlook.live.com/mail/0/deeplink/compose?to='+EMAIL+'&subject='+esc(SUBJ)+'&body='+esc(BODY);
+    var h='<div class="rec-overlay" id="rec-modal"><div class="rec-modal" role="dialog"><button class="rec-close" aria-label="Fermer">×</button><h2>Nous contacter — Recrutement</h2><p>Envoyez votre candidature à :</p><div class="rec-email" id="rec-email">'+EMAIL+'</div><div class="rec-copy-wrap"><button class="rec-copy" id="rec-copy">📋 Copier l\'adresse</button><span class="rec-copied" id="rec-copied" hidden>✓ Copié !</span></div><p class="rec-or">Ou composez votre message directement :</p><div class="rec-btns"><a href="'+gmail+'" target="_blank" rel="noopener" class="rec-btn">✉ Gmail (web)</a><a href="'+out+'" target="_blank" rel="noopener" class="rec-btn">✉ Outlook (web)</a><a href="'+mail+'" class="rec-btn rec-btn-primary">Mon client mail</a></div></div></div>';
+    var d=document.createElement('div'); d.innerHTML=h;
+    var overlay=d.firstChild; document.body.appendChild(overlay);
+    setTimeout(function(){ overlay.classList.add('open'); }, 10);
+    overlay.addEventListener('click', function(ev){ if(ev.target===overlay || ev.target.classList.contains('rec-close')) close(); });
+    document.getElementById('rec-copy').addEventListener('click', function(){
+      try { navigator.clipboard.writeText(EMAIL).then(function(){ var c=document.getElementById('rec-copied'); c.hidden=false; setTimeout(function(){c.hidden=true;},2000); }); } catch(e){}
+    });
+    function close(){ overlay.classList.remove('open'); setTimeout(function(){ if(overlay.parentNode) overlay.parentNode.removeChild(overlay); }, 300); }
+  }
+  document.addEventListener('click', function(e){
+    var t=e.target.closest('[data-rec-email]');
+    if(t) openModal(e);
+  });
+})();
