@@ -223,12 +223,18 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   }
 
   document.addEventListener('DOMContentLoaded', function(){
+    initLightbox();
+  });
+  if(document.readyState!=='loading') initLightbox();
+
+  function initLightbox(){
+    if(window.__lbInited) return; window.__lbInited=true;
     var figs=document.querySelectorAll('.gallery-grid .gallery-item');
     if(!figs.length) return;
     collect();
     figs.forEach(function(fig,i){
       fig.style.cursor='zoom-in';
-      fig.addEventListener('click', function(e){ e.preventDefault(); open(i); });
+      fig.addEventListener('click', function(e){ e.preventDefault(); e.stopPropagation(); open(i); });
     });
 
     // Swipe mobile
@@ -239,5 +245,5 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       var dx=e.changedTouches[0].clientX-sx;
       if(Math.abs(dx)>50){ if(dx>0) prev(); else next(); }
     }, {passive:true});
-  });
+  }
 })();
