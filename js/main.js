@@ -160,3 +160,84 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
     if(t) openModal(e);
   });
 })();
+
+
+// Lightbox pour galeries chantiers
+(function(){
+  var items=[], cur=0, overlay=null;
+
+  function collect(){
+    items=[].slice.call(document.querySelectorAll('.gallery-grid .gallery-item')).map(function(fig){
+      var img=fig.querySelector('img'), cap=fig.querySelector('figcaption');
+      return {
+        src: img?img.src:'',
+        alt: img?img.alt:'',
+        title: cap?(cap.querySelector('strong')||{}).textContent||'':'',
+        loc: cap?(cap.querySelector('span')||{}).textContent||'':''
+      };
+    });
+  }
+
+  function open(i){
+    cur=i;
+    if(!overlay){
+      overlay=document.createElement('div');
+      overlay.className='lb-overlay';
+      overlay.innerHTML='<button class="lb-close" aria-label="Fermer">×</button><button class="lb-nav lb-prev" aria-label="Précédent">‹</button><button class="lb-nav lb-next" aria-label="Suivant">›</button><div class="lb-stage"><img class="lb-img" alt=""><div class="lb-caption"><strong></strong><span></span><em class="lb-counter"></em></div></div>';
+      document.body.appendChild(overlay);
+      overlay.querySelector('.lb-close').addEventListener('click', close);
+      overlay.querySelector('.lb-prev').addEventListener('click', prev);
+      overlay.querySelector('.lb-next').addEventListener('click', next);
+      overlay.addEventListener('click', function(e){ if(e.target===overlay) close(); });
+      document.addEventListener('keydown', onKey);
+    }
+    render();
+    document.body.style.overflow='hidden';
+    setTimeout(function(){ overlay.classList.add('open'); },10);
+  }
+
+  function render(){
+    var it=items[cur];
+    overlay.querySelector('.lb-img').src=it.src;
+    overlay.querySelector('.lb-img').alt=it.alt;
+    overlay.querySelector('.lb-caption strong').textContent=it.title;
+    overlay.querySelector('.lb-caption span').textContent=it.loc;
+    overlay.querySelector('.lb-counter').textContent=(cur+1)+' / '+items.length;
+  }
+
+  function close(){
+    if(!overlay) return;
+    overlay.classList.remove('open');
+    document.body.style.overflow='';
+    setTimeout(function(){ if(overlay&&overlay.parentNode){ overlay.parentNode.removeChild(overlay); overlay=null; } },250);
+  }
+
+  function prev(){ cur=(cur-1+items.length)%items.length; render(); }
+  function next(){ cur=(cur+1)%items.length; render(); }
+
+  function onKey(e){
+    if(!overlay||!overlay.classList.contains('open')) return;
+    if(e.key==='Escape') close();
+    else if(e.key==='ArrowLeft') prev();
+    else if(e.key==='ArrowRight') next();
+  }
+
+  document.addEventListener('DOMContentLoaded', function(){
+    var figs=document.querySelectorAll('.gallery-grid .gallery-item');
+    if(!figs.length) return;
+    collect();
+    figs.forEach(function(fig,i){
+      fig.style.cursor='zoom-in';
+      fig.addEventListener('click', function(e){ e.preventDefault(); open(i); });
+    });
+
+    // Swipe mobile
+    var sx=0;
+    document.addEventListener('touchstart', function(e){ if(overlay&&overlay.classList.contains('open')) sx=e.touches[0].clientX; }, {passive:true});
+    document.addEventListener('touchend', function(e){
+      if(!overlay||!overlay.classList.contains('open')) return;
+      var dx=e.changedTouches[0].clientX-sx;
+      if(Math.abs(dx)>50){ if(dx>0) prev(); else next(); }
+    }, {passive:true});
+  });
+})();
